@@ -9,6 +9,7 @@ public class FirstMyObject {
 		Date day = new Date();
 		System.out.println("안녕은 영원한 헤어짐은 아니겠지요");
 		System.out.println(day);
+		//test
 	
 	}
 }
