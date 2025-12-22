@@ -9,7 +9,7 @@ public class VariablePractice1 {
 		System.out.print("이름을 입력하세요 : ");
 		String name = sc.next();
 		System.out.print("성병을 입력하세요(남/여) : ");
-		char gender = sc.next().charAt(0);//zㅋㅋㅋㅋㅋㅋㅁㄴㅇㄻㅇㄻㄴㅇㄹasdfasdfsadfasdf
+		char gender = sc.next().charAt(0);//
 		System.out.print("나이를 입력하세요 : ");
 		int age = sc.nextInt();
 		System.out.print("키를 입력하세요(cm) : ");
