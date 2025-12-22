@@ -278,10 +278,10 @@ public class ControlPractice {
 			return;
 		}
 		
-		int num1 = inum / 1000;
-		int num2 = (inum / 100) % 10;
-		int num3 = (inum / 10) % 10;
-		int num4 = inum % 10;
+		int num1 = inum / 1000;//천자리
+		int num2 = (inum / 100) % 10;//백자리
+		int num3 = (inum / 10) % 10;//십자리
+		int num4 = inum % 10;//일자리
 		
 		if (num1 == num2 || num1 == num3 || num1 == num4) {
 			System.out.println("중복");
