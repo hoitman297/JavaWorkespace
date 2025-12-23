@@ -203,7 +203,7 @@ public class LoopPractice {
 	
 	 	public void practice11() {
 	 		
-	 		
+	 		 int cut = 0;
 	 		 int num1 = 0;
 			 System.out.print("input : ");
 			 num1 = sc.nextInt();
@@ -213,21 +213,49 @@ public class LoopPractice {
 				 System.out.println("Error");
 				 return;
 			 }
-			 if(num1 == 2) {
-				 System.out.println("Prime Number");
+			 
+			 loop1:
+			 for (int i = 2; i <= num1; i++) {
+				 for (int j = 2; j < i; j++) {
+					 if (i % j == 0) {
+						 	continue loop1;
+					}
+				 }
+				 System.out.println( i );
+				 cut++;
 			 }
-			 for (int j = 2; j < num1; j++) {
-				 for (int i = 2; i < j; i++) {
-					 if(num1 % i == 0) {
-							System.out.println("Error");
-							continue;
-					 }
+			 System.out.println(cut);
+		}
+	 	public void practice12(){
+			System.out.print("정수 입력 : ");
+			int num = sc.nextInt();
+			int count = 0;
+			
+			
+			for(int i = 3; i<=num; i+=3) {
+				if(i==num) {
+					System.out.print("count : "+count);
+					break;
 				}
-				 System.out.println("Prime Number");
-				 
+				for(int j = 2; j<=i; j+=2) {
+					if(j==num) {
+						break;
+					}
+					if(j == i) {
+						System.out.print(j+" ");
+						count++;
+						break;
+					}
+					if (j==i) {
+						System.out.print(j+" ");
+					}
+					
+				}
+				System.out.print(i+" ");
+			
 			}
-	 	
-	 }
+			
+		}
 	
 	
 
@@ -236,6 +264,6 @@ public class LoopPractice {
 	
 	public static void main(String[] args) {
 		LoopPractice lp = new LoopPractice();
-		lp.practice11();
+		lp.practice12();
 	}
 }

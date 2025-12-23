@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 public class C_continue {
  /* continue:
-  *  프로그램 실행 중 continue문을 만나게 되면, 그 뒤에 있는 코드들을 실행하지 않고
-  *  가장 가까운 반복문으로 돌아가서 재실행
-  *  break와 비슷한 개념
+프로그램 실행 중 continue문을 만나게 되면, 그 뒤에 있는 코드들을 실행하지 않고
+가장 가까운 반복문으로 돌아가서 재실행
+break와 비슷한 개념
   */
 	private void 제1메소드() {
 		for (int i = 0; i < 10; i++) {

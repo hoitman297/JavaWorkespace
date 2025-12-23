@@ -1,3 +1,4 @@
+
 package com.kh.chap02.loop;
 
 public class B_While {
@@ -8,6 +9,7 @@ public class B_While {
 	   [초기식]
 	   while(조건식){
 	   반복적으로 수행할 코드
+	   [증감식] // 필수아님
 	 	
 	 */
 	public void method1() {
