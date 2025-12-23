@@ -127,15 +127,11 @@ public class ControlPractice {
 		String m = sc.nextLine();
 		switch (m) {
 		case "관리자":
-			System.out.println("회원관리, 게시글 관리 게시글 작성, 댓글 작성 게시글 조회");
-			break;
+			System.out.print("회원관리, 게시글 관리, ");
 		case "회원":
-			System.out.println("게시글 작성, 게시글 조회, 댓글 작성");
-			break;
+			System.out.println("게시글 작성, 댓글 작성, ");
 		case "비회원":
 			System.out.println("게시글 조회");
-			break;
-
 		default:
 			System.out.println("다시 입력해주세요.");
 			break;
@@ -151,11 +147,11 @@ public class ControlPractice {
 		System.out.println("bmi 지수 : " + bmi);
 		if(bmi < 18.5) {
 			System.out.println("저체중");
-		} else if(bmi >= 18.5 && bmi < 23) {
+		} else if(bmi < 23) {
 			System.out.println("정상체중");
-		} else if(bmi < 25 && bmi >= 23) {
+		} else if(bmi >= 23) {
 			System.out.println("과체중");
-		}else if(bmi >= 25 && bmi < 30) {
+		} else if(bmi < 30) {
 			System.out.println("비만");
 		} else {
 			System.out.println("고도비만");
@@ -273,26 +269,21 @@ public class ControlPractice {
 	public void practice11() {
 		System.out.print("input ");
 		int inum = sc.nextInt();
-		if(inum<1000 || inum > 9999) {
+		if (inum < 1000 || inum > 9999) {
 			System.out.println("자리수 초과");
 			return;
 		}
-		
-		int num1 = inum / 1000;//천자리
-		int num2 = (inum / 100) % 10;//백자리
-		int num3 = (inum / 10) % 10;//십자리
-		int num4 = inum % 10;//일자리
-		
-		if (num1 == num2 || num1 == num3 || num1 == num4) {
+
+		int num1 = inum / 1000;// 천자리
+		int num2 = (inum / 100) % 10;// 백자리
+		int num3 = (inum / 10) % 10;// 십자리
+		int num4 = inum % 10;// 일자리
+
+		if (num1 == num2 || num1 == num3 || num1 == num4 || num2 == num3 || num2 == num4 || num3 == num4) {
 			System.out.println("중복");
-		} else if (num2 == num4 || num2 == num3) {
-			System.out.println("중복");
-		} else if (num3 == num4) {
-			System.out.println("중복");
-		}else {
+		} else {
 			System.out.println("성공");
 		}
-		//포기 이거 못해 정공법으로 풀자
 	}
 } //return
 // 메서드 내 어디서든 사용가능
