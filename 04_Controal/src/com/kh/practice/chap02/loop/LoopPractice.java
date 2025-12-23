@@ -226,6 +226,7 @@ public class LoopPractice {
 			 }
 			 System.out.println(cut);
 		}
+	 	
 	 	public void practice12(){
 			System.out.print("정수 입력 : ");
 			int num = sc.nextInt();
@@ -246,9 +247,7 @@ public class LoopPractice {
 						count++;
 						break;
 					}
-					if (j==i) {
-						System.out.print(j+" ");
-					}
+					System.out.print(j+" ");
 					
 				}
 				System.out.print(i+" ");
