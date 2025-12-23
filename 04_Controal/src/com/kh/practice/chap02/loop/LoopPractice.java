@@ -233,26 +233,18 @@ public class LoopPractice {
 			int count = 0;
 			
 			
-			for(int i = 3; i<=num; i+=3) {
-				if(i==num) {
-					System.out.print("count : "+count);
-					break;
+			for(int i = 2; i<=num; i++) {
+				if (i % 3 == 0 && i % 2 == 0) {
+					System.out.print(i + " ");
+					count++;
+				}else if(i % 2 == 0) {
+					System.out.print( i + " ");
+				}else if(i % 3 == 0) {
+					System.out.print( i + " ");
 				}
-				for(int j = 2; j<=i; j+=2) {
-					if(j==num) {
-						break;
-					}
-					if(j == i) {
-						System.out.print(j+" ");
-						count++;
-						break;
-					}
-					System.out.print(j+" ");
-					
-				}
-				System.out.print(i+" ");
-			
 			}
+			System.out.println();
+			System.out.print(count);
 			
 		}
 	
