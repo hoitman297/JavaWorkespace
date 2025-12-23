@@ -162,11 +162,20 @@ public class ControlPractice {
 	public void practice8(){
 		System.out.print("number1 input : ");
 		double num1 = sc.nextDouble();
+		
 		System.out.print("number2 input : ");
 		double num2 = sc.nextDouble();
+		
 		System.out.print("operator input : ");
 		char op = sc.next().charAt(0);
+		
 		double sum = 0;
+		
+		if(!(num1 > 0 && num2 > 0)) {
+			System.out.println("error");
+			return;
+		}
+		
 		switch (op) {
 		case '+':
 			sum = num1 + num2;
@@ -185,9 +194,9 @@ public class ControlPractice {
 			break;
 		default:
 			System.out.println("error");
-			break;
+			return;
 		}
-		System.out.println(((int)num1) + " "+ op + " " +((int)num2) + " = " + sum);
+			System.out.println(((int)num1) + " "+ op + " " +((int)num2) + " = " + sum);
 	}
 
 	public void practice9() {

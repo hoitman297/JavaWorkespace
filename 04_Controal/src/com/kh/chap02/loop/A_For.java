@@ -1,5 +1,7 @@
 package com.kh.chap02.loop;
 
+import java.util.Iterator;
+
 public class A_For {
 	/*
 	 * <반복문>
@@ -90,24 +92,44 @@ public class A_For {
 		System.out.println(sum);
 	}
 	public void method6() {
-		String str = "This is Myoung Ji Won"; // 문자열의 길이 5
+		String str = "This is Myoung Ji Won";
 		//	System.out.println(str.charAt(0));
-		for (int i = 0; i < str.length(); i++) {
+		for (int i = 0; i < str.length(); i++) { //변수명.length() 문자열 길이
 			System.out.print(str.charAt(i));
 		}
 	}
 	public void method7() {
 		//구구단
 		int result = 0;
-		for (int i = 1; i <= 2; i++) {
+		for (int i = 1; i <= 9; i++) {
 			for (int j = 1; j <= 9; j++) {
 				result = i * j;
 				System.out.println(i + " X " + j + " = " + result);
 			}
+			System.out.print("\n");
 		}
+	}
+	public void method8() {
+		for (int i = 1; i < 6; i++) {
+			for (int j = 0; j < 5; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method9() {
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				if (j == i) System.out.print(i + 1);
+				else System.out.print("*");
+			}
+			System.out.println();
+		}
+			
 	}
 	public static void main(String[] args) {
 		A_For af = new A_For();
-		af.method7();
+		af.method9();
 	}
 }
