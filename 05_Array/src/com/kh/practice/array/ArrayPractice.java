@@ -250,16 +250,17 @@ public class ArrayPractice {
 			if (ad == 'y' || ad == 'Y') {
 				System.out.print("add size input : ");
 				sizeadd = sc.nextInt();
-				
-				String strAdd[] = new String[size + sizeadd];
-				System.arraycopy(str, 0 , strAdd, size + sizeadd, str.length);
-				System.out.println(strAdd.length);
+				String strAdd[] = new String[str.length + sizeadd];
+				System.arraycopy(str, 0 , strAdd, 0 , str.length);
 				for (int i = str.length; i < strAdd.length; i++) {
 					System.out.print(i + 1 + " input : ");
 					strAdd[i] = sc.next();
+					sc.nextLine();
 				}
-				System.out.println(Arrays.toString(strAdd));
+				str = strAdd;
 			} else if (ad == 'n' || ad == 'N') {
+				System.out.println(Arrays.toString(str));
+				break;
 			}
 		}
 	}
