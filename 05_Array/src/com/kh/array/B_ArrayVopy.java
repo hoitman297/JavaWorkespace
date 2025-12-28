@@ -73,7 +73,7 @@ public class B_ArrayVopy {
 		int [] origin = {1,2,3,4,5};
 		
 		// Arrays.copyOf(원본배열명, 복사할 갯수)
-		int [] copy = Arrays.copyOf(origin, 5); // 복사할 갯수 == 복사본 배열의 크기.
+		int [] copy = Arrays.copyOf(origin, 8); // 복사할 갯수 == 복사본 배열의 크기.
 		
 		System.out.println(Arrays.toString(copy));
 		
@@ -88,6 +88,6 @@ public class B_ArrayVopy {
 	
 	public static void main(String[] args) {
 		B_ArrayVopy Ba = new B_ArrayVopy();
-		Ba.method5();
+		Ba.method4();
 	}
 }
