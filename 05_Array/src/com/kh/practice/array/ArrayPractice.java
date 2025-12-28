@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -255,7 +256,6 @@ public class ArrayPractice {
 				for (int i = str.length; i < strAdd.length; i++) {
 					System.out.print(i + 1 + " input : ");
 					strAdd[i] = sc.next();
-					sc.nextLine();
 				}
 				str = strAdd;
 			} else if (ad == 'n' || ad == 'N') {
