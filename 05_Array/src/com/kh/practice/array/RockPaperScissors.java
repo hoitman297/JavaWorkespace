@@ -41,6 +41,7 @@ public class RockPaperScissors {
 		}
 		
 	}
+	
 	public static void main(String[] args) {
 		RockPaperScissors rps = new RockPaperScissors();
 		rps.짱깬뽀();
