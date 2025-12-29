@@ -237,26 +237,28 @@ public class ArrayPractice {
 	public void practice12() {
 
 		int size = 0;
-		int sizeadd = 0;
+		int sizeAdd = 0;
 		System.out.print("size input : ");
 		size = sc.nextInt();
+		sc.nextLine();
 		String str[] = new String[size];
 		for (int i = 0; i < str.length; i++) {
 			System.out.print(i + 1 + " input : ");
-			str[i] = sc.next();
-			sc.nextLine();
+			str[i] = sc.nextLine();
 		}
 		while (true) {
 			System.out.print("Add (y / n) : ");
 			char ad = sc.next().charAt(0);
+			
 			if (ad == 'y' || ad == 'Y') {
-				System.out.print("add size input : ");
-				sizeadd = sc.nextInt();
-				String strAdd[] = new String[str.length + sizeadd];
+				System.out.print("size add input : ");
+				sizeAdd = sc.nextInt();
+				sc.nextLine();
+				String strAdd[] = new String[str.length + sizeAdd];
 				System.arraycopy(str, 0, strAdd, 0, str.length);
 				for (int i = str.length; i < strAdd.length; i++) {
 					System.out.print(i + 1 + " input : ");
-					strAdd[i] = sc.next();
+					strAdd[i] = sc.nextLine();
 				}
 				str = strAdd;
 			} else if (ad == 'n' || ad == 'N') {
@@ -268,6 +270,6 @@ public class ArrayPractice {
 
 	public static void main(String[] args) {
 		ArrayPractice ap = new ArrayPractice();
-		ap.practice11();
+		ap.practice12();
 	}
 }
