@@ -163,10 +163,9 @@ public class ArrayPractice {
 		System.out.print("input ========> ");
 		String num = sc.next();
 		char ch[] = num.toCharArray();
-		char 자료[] = { '*', '*', '*', '*', '*', '*', '*' };
-		char copy[] = new char[ch.length];
-		System.arraycopy(ch, 0, copy, 0, 14);
-		System.arraycopy(자료, 0, copy, 7, 7);
+		char copy[] = Arrays.copyOf(ch, ch.length);
+		char 자료[] = { '*', '*', '*', '*', '*', '*' };
+		System.arraycopy(자료, 0, copy, 8, 6);
 		for (int i = 0; i < copy.length; i++) {
 			System.out.print(copy[i]);
 		}
@@ -174,23 +173,25 @@ public class ArrayPractice {
 
 	public void practice9() {
 		int num[] = new int[10];
-		int max = 0;
-		int min = 0;
+
 		for (int i = 0; i < num.length; i++) {
 			num[i] = (int) (Math.random() * 10 + 1);
 			System.out.print(num[i] + " ");
 		}
+		int max = num[0];
+		int min = num[0];
 		System.out.println();
 
 		for (int i = 0; i < num.length; i++) {
 			if (max < num[i]) {
 				max = num[i];
-			} else if (min > num[i]) {
+			}
+			if (min > num[i]) {
 				min = num[i];
 			}
 		}
-		System.out.println(max);
-		System.out.println(min);
+		System.out.println("max Value === " + max);
+		System.out.println("min Value === " + min);
 
 	}
 
@@ -252,7 +253,7 @@ public class ArrayPractice {
 				System.out.print("add size input : ");
 				sizeadd = sc.nextInt();
 				String strAdd[] = new String[str.length + sizeadd];
-				System.arraycopy(str, 0 , strAdd, 0 , str.length);
+				System.arraycopy(str, 0, strAdd, 0, str.length);
 				for (int i = str.length; i < strAdd.length; i++) {
 					System.out.print(i + 1 + " input : ");
 					strAdd[i] = sc.next();
@@ -267,6 +268,6 @@ public class ArrayPractice {
 
 	public static void main(String[] args) {
 		ArrayPractice ap = new ArrayPractice();
-		ap.practice12();
+		ap.practice11();
 	}
 }
