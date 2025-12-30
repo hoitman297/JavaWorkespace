@@ -24,8 +24,23 @@ public class FieldTest1 {
 	 	 소멸시점 : 특정영역이 끝날 때.
 	 	
 	 */
-	private int global;
-	public void test(int num) {
+	private int global;//전역변수 (필드)
+	{
+		//초기화 블럭
+		//객체 생성 시 최초 1회 실행
+		global = 50;
+	}
+	
+	public static int num;
+	//static 초기화 블럭
+	static {
+		
+		//static 변수를 초기화 하는데 사용한다.
+		//프로그램 실행될때 최초 1번 실행 (싱글턴 패턴)
+		
+		num = 55;
+	}
+	public void test(int num) {//매개변수 (지역변수)
 		int local = 0;
 		
 		if(true) {

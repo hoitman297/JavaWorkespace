@@ -16,6 +16,7 @@ public class Run {
 		//클래스명.static 필드명 or 클래스명. static메서드()
 		System.out.println(tf3.PI);
 		System.out.println(FieldTest3.PI);
+		System.out.println(FieldTest3.sta);
 		//객체를 생성하지 않아도, 이미 메모리에 저장공간이 할당된 상태이기 때문.
 	}
 }
