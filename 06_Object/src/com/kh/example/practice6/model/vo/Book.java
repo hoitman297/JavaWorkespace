@@ -36,4 +36,6 @@ public class Book {
 		System.out.println(price);
 		System.out.println(discountRate);
 	}
+
+
 }

@@ -13,7 +13,7 @@ public class SquareController {
 		
 	}
 	
-	public void paintColor() {
+	public void paintColor(String color) {
 		
 	}
 	
