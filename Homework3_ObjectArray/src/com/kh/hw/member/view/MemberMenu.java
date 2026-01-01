@@ -19,11 +19,11 @@ public class MemberMenu {
 			System.out.println("현재 등록된 회원 수는 " + mc.exitstMemberNum() + "입니다.");
 			if (mc.exitstMemberNum() < 10) {
 				System.out.println("new 회원");
-				System.out.println("1. 새 회원 등록 : ");
-				System.out.println("2. 회원 검색 : ");
-				System.out.println("3. 회원 정보 수정 : ");
-				System.out.println("4. 회원 삭제 : ");
-				System.out.println("5. 모두 출력 : ");
+				System.out.println("1. 새 회원 등록");
+				System.out.println("2. 회원 검색");
+				System.out.println("3. 회원 정보 수정");
+				System.out.println("4. 회원 삭제");
+				System.out.println("5. 모두 출력");
 				System.out.println("9. 끝내기");
 				System.out.print("메뉴 번호 : ");
 				input = sc.nextInt();
@@ -44,10 +44,10 @@ public class MemberMenu {
 					continue;
 				}
 			} else if (mc.exitstMemberNum() == 10) {
-				System.out.println("2. 회원 검색 : ");
-				System.out.println("3. 회원 정보 수정 : ");
-				System.out.println("4. 회원 삭제 : ");
-				System.out.println("5. 모두 출력 : ");
+				System.out.println("2. 회원 검색");
+				System.out.println("3. 회원 정보 수정");
+				System.out.println("4. 회원 삭제");
+				System.out.println("5. 모두 출력");
 				System.out.println("9. 끝내기");
 				System.out.print("메뉴 번호 : ");
 				input = sc.nextInt();
@@ -74,6 +74,7 @@ public class MemberMenu {
 			System.out.print("아이디 : ");
 			String id = sc.next();
 			if (mc.checkId(id)) {
+				System.out.println("아이디가 중복 되었습니다. 다시 입력해주세요.");
 				continue;
 			}
 			System.out.print("이름 : ");
@@ -107,19 +108,42 @@ public class MemberMenu {
 	}
 
 	public void searchMember() {
+		System.out.println("1. 아이디로 검색하기");
+		System.out.println("2. 이름으로 검색하기");
+		System.out.println("3. 이메일로 검색하기");
+		System.out.println("9. 메인으로 돌아가기");
+		System.out.print("메뉴 번호 : ");
+		int num = sc.nextInt();
 		
+		if (num == 1) {
+			searchId();
+		}else if (num == 2) {
+			searchName();
+		}else if (num == 3) {
+			searchEmail();
+		}else if (num == 9) {
+			mainMenu();
+		}
 	}
 
 	public void searchId() {
-
+		System.out.print("검색할 아이디 : ");
+		String id = sc.next();
+		sc.nextLine();
+		System.out.println(mc.searchId(id));
 	}
 
-	public void setcName() {
-
+	public void searchName() {
+		System.out.print("검색할 이름 : ");
+		String name = sc.next();
+		sc.nextLine();
 	}
 
 	public void searchEmail() {
-
+		System.out.print("검색할 이메일 : ");
+		String email = sc.next();
+		sc.nextLine();
+		System.out.println(mc.searchId(email));
 	}
 
 	public void updateMember() {
