@@ -1,6 +1,5 @@
 package com.kh.hw.member.view;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 import com.kh.hw.member.controller.MemberController;
