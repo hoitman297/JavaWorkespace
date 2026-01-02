@@ -1,8 +1,5 @@
 package com.kh.hw.member.controller;
 
-import java.util.Arrays;
-import java.util.Iterator;
-
 import com.kh.hw.member.model.vo.Member;
 
 public class MemberController {
@@ -108,8 +105,9 @@ public class MemberController {
 	}
 
 	public void delete() {
-		Member m[] = new Member[SIZE];
-		count = 0;
+		for (int i = 0; i < count; i++) {
+			m[i] = null;
+		}
 	}
 
 	public Member[] printAll() {
