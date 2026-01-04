@@ -40,7 +40,7 @@ public class MemberMenu {
 				} else if (input == 5) {
 					printAll();
 				} else if (input == 9) {
-					break;
+					return;
 				} else {
 					System.out.println("Error");
 					continue;

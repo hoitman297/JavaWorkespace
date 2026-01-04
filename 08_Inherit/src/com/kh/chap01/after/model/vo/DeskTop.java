@@ -35,8 +35,8 @@ public class DeskTop extends Product{
 	public void setAllInOne(boolean allInOne) {
 		this.allInOne = allInOne;
 	}
-	// 객체의 정보를 문자열로 반환하는 메서드.
-	// 오버라이딩 : 부모클래스의 메서드명이 동일한 케이스.
+//	 객체의 정보를 문자열로 반환하는 메서드.
+//	 오버라이딩 : 부모클래스의 메서드명이 동일한 케이스.
 	public String information() {
 		//return  getBrand() + " " + getpName() + " " + getPrice() + " " + getpCode() + " " + isAllInOne();
 		return super.information() + " " + allInOne;
