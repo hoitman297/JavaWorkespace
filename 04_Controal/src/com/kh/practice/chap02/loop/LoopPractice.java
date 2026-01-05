@@ -181,28 +181,9 @@ public class LoopPractice {
 			}
 			System.out.println();
 		}
-<<<<<<< HEAD
-	 	
-	 	public void practice12(){
-			 System.out.print("input : ");
-			 int num = sc.nextInt();
-			 
-			 int count = 0;
-			 
-			 for(int i=2; i<=num; i++) {
-				 if(i%2 == 0 && i%3 == 0) {
-					 count++;
-					 System.out.print(i+" ");
-				 }
-				 else if(i%2 == 0) System.out.print(i + " ");
-				 else if(i%3 == 0) System.out.print(i + " ");
-			 }
-			 System.out.println("\ncount : " + count);
-		}
-	
-	
-=======
 	}
+	 	
+
 
 	public void practice10() {
 		int num1 = 0;
@@ -252,7 +233,6 @@ public class LoopPractice {
 			if (isPrime) {
 				count++;
 				System.out.println(i + " ");
->>>>>>> branch 'main' of https://github.com/hoitman297/JavaWorkespace.git
 
 			}
 		}
@@ -280,6 +260,6 @@ public class LoopPractice {
 
 	public static void main(String[] args) {
 		LoopPractice lp = new LoopPractice();
-		lp.practice12	();
+		lp.practice12();
 	}
 }

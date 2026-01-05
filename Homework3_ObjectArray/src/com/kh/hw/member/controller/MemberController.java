@@ -4,14 +4,38 @@ import com.kh.hw.member.model.vo.Member;
 
 public class MemberController {
 	public static final int SIZE = 10;
-	Member[] m = new Member[SIZE];
+	Member[] m = new Member[SIZE]; //[new Member, null, null, null]
 	public int count = 0;
 
 	public int exitstMemberNum() {
+		// 현재 존재하는 멤버 수 반환
+		
+		/*
+		 * int count = 0; 
+		 * 
+		 * for(Member mem : m) { 
+		 * // 객체가 초기화 된 경우 if(mem != null)
+		 *  { count++; } 
+		 *  }
+		 */
+		
 		return count;
 	}
 
 	public boolean checkId(String inputId) {
+		//아이디 중복 확인하는 메소드
+		/*
+		 * for(Member men : m){
+		 *	(객체배열에 저장된 Menber객체의 id값과 사용자가 입력한 id값을 비교.)
+		 *
+		 *	if(mem != null && inputId.equals(mem.getId()))
+		 *	isDup = true;
+		 *	break;
+		 *	}
+		 * 		}
+		 */
+		
+		
 		for (int i = 0; i < count; i++) {
 			if (m[i].getId().equals(inputId)) {
 				return true;

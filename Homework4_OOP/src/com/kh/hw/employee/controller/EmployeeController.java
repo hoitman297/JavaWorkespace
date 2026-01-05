@@ -26,8 +26,9 @@ public class EmployeeController {
 	}
 
 	public Employee remove() {
-		e = null;
-		return e;
+		// Employee delete = e; //기존 주소값 복사
+		e = null; // 삭제 처리
+		return e; // 삭제된 주소값 반환
 	}
 
 	public String inform() {
