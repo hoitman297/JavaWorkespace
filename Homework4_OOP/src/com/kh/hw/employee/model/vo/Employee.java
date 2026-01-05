@@ -87,6 +87,7 @@ public class Employee {
 		this.bonus = bonus;
 	}
 	
+	@Override
 	public String printEmployee() {
 		return empNo + " " + name+ " " + gender+ " " + phone+ " " + dept+ " " + salary + " "+ bonus;
 	}

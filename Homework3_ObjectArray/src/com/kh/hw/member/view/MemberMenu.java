@@ -17,7 +17,7 @@ public class MemberMenu {
 	public void mainMenu() {
 		while (true) {
 			System.out.println();
-			System.out.println("최대 등록 가능한 회원 수는 10명입니다.");
+			System.out.println("최대 등록 가능한 회원 수는 "+MemberController.SIZE+"명입니다.");
 			System.out.println("현재 등록된 회원 수는 " + mc.exitstMemberNum() + "입니다.");
 			if (mc.exitstMemberNum() < 10) {
 				System.out.println("new 회원");
@@ -76,6 +76,7 @@ public class MemberMenu {
 		while (true) {
 			System.out.print("아이디 : ");
 			String id = sc.next();
+			
 			if (mc.checkId(id)) {
 				System.out.println("아이디가 중복 되었습니다. 다시 입력해주세요.");
 				continue;
@@ -86,7 +87,8 @@ public class MemberMenu {
 			String password = sc.next();
 			System.out.print("이메일 : ");
 			String email = sc.next();
-			char gender;
+
+			char gender = '\u0000';
 			while (true) {
 				System.out.print("성별 : ");
 				gender = sc.next().charAt(0);
