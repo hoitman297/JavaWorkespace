@@ -198,7 +198,7 @@ public class MemberMenu {
 		System.out.println("9. 메인으로 돌아가기");
 		System.out.print("메뉴 번호 : ");
 		int num = sc.nextInt();
-
+		
 		if (num == 1) {
 			updatePassword();
 		} else if (num == 2) {
@@ -209,6 +209,7 @@ public class MemberMenu {
 			mainMenu();
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
+			updateMember();
 		}
 	}
 
