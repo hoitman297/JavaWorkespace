@@ -315,7 +315,7 @@ public class MemberMenu {
 	}
 
 	public void printAll() {
-		for(Member mb : mc.printAll()) {
+		for (Member mb : mc.printAll()) {
 			if (mb != null) {
 				System.out.println(mb.inform());
 			}
