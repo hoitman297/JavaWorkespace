@@ -24,7 +24,7 @@ public class Run {
 		
 		//3. 부모타입 참조변수로 자식 타입 객체를 다루는 방법.
 		System.out.println("3. 부모타입 참조변수로 자식타입 객체 다루기");
-		Parent p2 = new Chilld_1(); //다양성이 적용된 개념
+		Parent p2 = new Chilld_1(); //다형성이 적용된 개념
 		p2.printParent(); //p2(부모타입변수) 로는 Parent 클래스내부의 메서드/필드만 접근가능/
 		// 자식 클래스의 메서드에 접근하고자 한다면, DownCasting이 필요.
 		((Chilld_1)p2).printChild1();// downCasting

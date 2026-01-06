@@ -32,6 +32,6 @@ public class Student extends Person {
 
 	@Override
 	public String toString() {
-		return "[grade=" + grade + ", major=" + major + "]";
+		return super.getName()	+ " 	" + super.getAge() + " " + super.getHeight() + " " + super.getHeight() + "[grade=" + grade + ", major=" + major + "]";
 	}
 }
