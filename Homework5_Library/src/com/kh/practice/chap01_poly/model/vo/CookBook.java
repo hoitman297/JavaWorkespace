@@ -22,7 +22,7 @@ public class CookBook extends Book{
 
 	@Override
 	public String toString() {
-		return getTitle() + " " + getAuthor()  + " " +  getPublisher()  + " " + coupon;
+		return super.toString()  + " " + coupon;
 	}
 
 	
