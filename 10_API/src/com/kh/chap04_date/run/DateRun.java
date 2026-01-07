@@ -125,6 +125,6 @@ public class DateRun {
 	
 	public static void main(String[] args) {
 		DateRun dr = new DateRun();
-		dr.test5();
+		dr.test1();
 	}
 }
