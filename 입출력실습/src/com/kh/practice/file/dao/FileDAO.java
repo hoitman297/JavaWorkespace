@@ -1,5 +1,19 @@
 package com.kh.practice.file.dao;
 
 public class FileDAO {
+	public boolean checkName(String file) {
+		
+	}
 	
+	public void fileSave(String file, String s) {
+		
+	}
+	
+	public StringBuilder fileOpen(String file) {
+		
+	}
+	
+	public void fileEdit(String file) {
+		
+	}
 }
