@@ -1,9 +1,10 @@
 package com.kh.execption.run;
 
-import com.kh.execption.controller.A어쩌고;
+import com.kh.execption.controller.B_CheckedException;
+import com.kh.execption.controller.C_CustomExecption;
 
 public class Run {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws C_CustomExecption {
 		/*
 			에러(오류) 종류
 				- 시스템 에러
@@ -26,7 +27,9 @@ public class Run {
 		 */
 		
 		
-		A어쩌고 aue = new A어쩌고();
+		B_CheckedException aue = new B_CheckedException();
 		aue.method1();
+		
+		throw new C_CustomExecption("에러 발생");
 	}
 }
