@@ -13,7 +13,9 @@ public class BookDAO {
 	public void fileSave(Book[] bArr){
 		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("book.txt"));) {
 			for (Book b : bArr) {
-				oos.writeObject(b);
+				if(b != null){
+					oos.writeObject(b);
+				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

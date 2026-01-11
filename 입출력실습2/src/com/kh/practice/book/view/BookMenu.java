@@ -13,6 +13,7 @@ public class BookMenu {
 
 	public BookMenu() {
 		bc.makeFile();
+		bArr = bc.fileRead();
 	}
 
 	public void mainMenu() {
@@ -46,12 +47,13 @@ public class BookMenu {
 		int count = 0;
 		System.out.print("도서 명 : ");
 		String title = sc.nextLine();
-
+		sc.nextLine();
 		System.out.print("저자 명 : ");
 		String author = sc.nextLine();
 
 		System.out.print("도서 가격 : ");
 		int price = sc.nextInt();
+		sc.nextLine();
 
 		System.out.print("출판 날짜(yyyy-mm-dd) : ");
 		String dateStr = sc.nextLine();
@@ -66,14 +68,18 @@ public class BookMenu {
 
 		System.out.print("할인율 : ");
 		double db = sc.nextDouble();
+		sc.nextLine();
 
 		bArr[count++] = new Book(title, author, price, publishDate, db);
-
 		bc.fileSave(bArr);
-
 	}
 
 	public void fileRead() {
+		for (Book b : bArr) {
+			if(b != null) {
+				System.out.println(b);
+			}
+		}
 		bc.fileRead();
 	}
 }
