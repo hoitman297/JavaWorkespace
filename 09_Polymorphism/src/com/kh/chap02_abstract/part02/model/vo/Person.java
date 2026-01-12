@@ -1,15 +1,17 @@
 package com.kh.chap02_abstract.part02.model.vo;
 
 public abstract class Person {
+	
+	//일반필드
 	private String name;
 	private double weight;
 	private int health;
 	
 	public Person() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
-	public Person(String name, double weight, int health) {
+	protected Person(String name, double weight, int health) {
 		super();
 		this.name = name;
 		this.weight = weight;
@@ -45,8 +47,19 @@ public abstract class Person {
 		return "Person [name=" + name + ", weight=" + weight + ", health=" + health + "]";
 	}
 	
+	//일반 메서드,  생성자, 필드 , 추상메서드
 	public abstract void eat();
 	public abstract void sleep();
-
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

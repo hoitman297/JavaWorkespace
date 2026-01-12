@@ -1,18 +1,22 @@
 package com.kh.chap05_class.model.vo;
 
 public class Book {
-	private String title;
-	private String author;
+	// 필드
+	public String title;
+	public String author;
 	
+	// 생성자부
 	public Book() {
-		
+
 	}
 
 	public Book(String title, String author) {
+		super();
 		this.title = title;
 		this.author = author;
 	}
-
+	
+	// 메서드부
 	public String getTitle() {
 		return title;
 	}
@@ -29,10 +33,4 @@ public class Book {
 		this.author = author;
 	}
 
-	@Override
-	public String toString() {
-		return "Book [title=" + title + ", author=" + author + "]";
-	}
-	
-	
 }

@@ -6,4 +6,20 @@ public class Tv {
 	private String pName;
 	private int price;
 	private int inch;
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

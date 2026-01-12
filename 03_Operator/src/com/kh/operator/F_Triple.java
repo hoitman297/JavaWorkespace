@@ -1,56 +1,57 @@
 package com.kh.operator;
 
 public class F_Triple {
-	
+
 	/*
-	 * »ïÇ×¿¬»êÀÚ 
-	 *  - 3°³ÀÇ Ç×¸ñÀ» °¡Áö°í ¿¬»êÇÏ´Â ¿¬»êÀÚ
-	 *  [Ç¥Çö¹ý]
-	 *  Á¶°Ç½Ä ? Á¶°ÇÀÌ trueÀÎ °æ¿ì °á°ú°© : Á¶°ÇÀÌ falseÀÎ °æ¿ì °á°ú°ª
-	 *   A ? B : C 
+	 * ì‚¼í•­ì—°ì‚°ìž - 3ê°œì˜ í•­ëª©ì„ ê°€ì§€ê³  ì—°ì‚°í•˜ëŠ” ì—°ì‚°ìž [í‘œí˜„ë²•] ì¡°ê±´ì‹ ? ì¡°ê±´ì´ trueì¸ ê²½ìš° ê²°ê³¼ê°’ : ì¡°ê±´ì´ falseì¸ ê²½ìš° ê²°ê³¼ê°’
 	 */
-	
-	public void mehod1() {
+	public void method1() {
 		int num = 50;
-		
-		// numÀÇ °ªÀÌ ¾ç¼öÀÎÁö ¾Æ´ÑÁö ÆÇ´Ü.
+
+		// numì˜ ê°’ì´ ì–‘ìˆ˜ì¸ì§€ ì•„ë‹Œì§€ íŒë‹¨.
 		boolean result = num > 0 ? true : false;
-		System.out.println(result ? "¾ç¼öÀÔ´Ï´Ù." : "À½¼öÀÔ´Ï´Ù.");
-		
+		System.out.println(result ? "ì–‘ìˆ˜ìž…ë‹ˆë‹¤" : "ìŒìˆ˜ìž…ë‹ˆë‹¤");
 	}
-	
+
 	public void method2() {
 		int num = 0;
-		
-		//numÀÇ °ªÀÌ ¾ç¼ö, À½¼ö, 0Áß ¹«¾ùÀÎÁö ÆÇ´Ü
-		String result = num > 0 ? "¾ç¼ö" : (num < 0 ? "À½¼ö" : "0ÀÔ´Ï´Ù.");
+
+		// numì˜ ê°’ì´ ì–‘ìˆ˜,ìŒìˆ˜,0ì¤‘ ë¬´ì—‡ì¸ì§€ íŒë‹¨
+		String result = num > 0 ? "ì–‘ìˆ˜" : (num < 0 ? "ìŒìˆ˜" : "0ìž…ë‹ˆë‹¤");
 	}
+
 	public void quiz() {
-        int a = 5;
-        int b = 10;
-        int c = (++a) + b; // c = 16, a = 6, b = 10
-        int d = c / a; // d = 2
-        int e = c % a; // e = 4
-        int f = e++; // f = 4, e = 5
-        int g = (--b) +(d--); // g = 11, b = 9, d = 1 
-        int h = 2;
-        int i = (a++) + b / (--c / f) * (g-- - d) % (++e + h);
-        // a = 6, b = 9, c = 16, d = 1, e = 5 , f = 4 , g= 11, h = 2
-        // 6 + 9 /(15 / 4) * (11 - 1) % (6 + 2) =
-        // i = 2
-        // a = 7, b = 9, c = 15, f = 4, g = 10, d = 1, e = 6, h = 2 i =2
-        System.out.println("a : "+a);//7
-        System.out.println("b : "+b);//9
-        System.out.println("c : "+c);//15
-        System.out.println("d : "+d);//1
-        System.out.println("e : "+e);//6
-        System.out.println("f : "+f);//4
-        System.out.println("g : "+g);//10
-        System.out.println("h : "+h);//2
-        System.out.println("i : "+i);//12
-    }
-	public static void main(String[] args) {
-		F_Triple ft = new F_Triple();
-		ft.quiz();
+
+		int a = 5;
+		int b = 10;
+
+		int c = (++a) + b; // a = 6, b = 10 , c = 16
+		int d = c / a; // a = 6, b = 10 , c = 16, d = 2
+		
+		//a = 6, b = 10 , c = 16, d = 2, e = 4
+		int e = c % a; 
+		
+		//a = 6, b = 10 , c = 16, d = 2, e = 4(5) , f = 4
+		int f = e++;
+		//a = 6, b = 9 , c = 16, d = 2(1), e = 5 , f = 4
+		//g = 11
+		int g = (--b) + (d--);
+		
+		int h = 2;
+		//a = 6(7), b = 9 , c = 15, d = 1, e = 6 , f = 4
+		//g = 11(10) , h = 2 , i = 12
+		int i = (a++) + b / (--c / f) * (g-- - d) % (++e + h);
+		// 6 + b / (15 / 4) * (11 - 1) % (6 + 2)
+		// 6 + 9 / 3 * 10 % 8
+		// 12
+		System.out.println("a : " + a); // 7
+		System.out.println("b : " + b); // 9
+		System.out.println("c : " + c); // 15
+		System.out.println("d : " + d); // 1
+		System.out.println("e : " + e); // 6
+		System.out.println("f : " + f); // 4
+		System.out.println("g : " + g); // 10
+		System.out.println("h : " + h); // 2
+		System.out.println("i : " + i); // 12
 	}
 }

@@ -7,8 +7,9 @@ public class SmartPhone extends Product{
 		
 	}
 	
-	public SmartPhone(String brand,String pCode,String pName,int price,String mobileAgency) {
-		super(brand,pCode,pName,price);
+	public SmartPhone(String brand, String pCode, String pName, 
+			int price, String mobileAgency) {
+		super(brand, pCode, pName, price);
 		this.mobileAgency = mobileAgency;
 	}
 
@@ -22,7 +23,18 @@ public class SmartPhone extends Product{
 	
 	@Override
 	public String information() {
-		return super.information()	 + " " + mobileAgency;
+		return super.information() +", " + mobileAgency;
 	}
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

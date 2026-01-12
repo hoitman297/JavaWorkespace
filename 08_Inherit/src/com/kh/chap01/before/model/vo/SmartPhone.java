@@ -1,6 +1,7 @@
 package com.kh.chap01.before.model.vo;
 
 public class SmartPhone {
+	
 	private String brand;
 	private String pCode;
 	private String pName;
@@ -10,13 +11,14 @@ public class SmartPhone {
 	public SmartPhone() {
 		
 	}
-	
-	public SmartPhone(String brand, String pCode, String pName, int price, String mobileAgency) {
+
+	public SmartPhone(String brand, String pCode, String pName,
+			int price, String mobileAgency) {
 		this.brand = brand;
 		this.pCode = pCode;
 		this.pName = pName;
 		this.price = price;
-		this.mobileAgency = mobileAgency;
+		this.mobileAgency = mobileAgency;		
 	}
 
 	public String getBrand() {
@@ -58,4 +60,18 @@ public class SmartPhone {
 	public void setMobileAgency(String mobileAgency) {
 		this.mobileAgency = mobileAgency;
 	}
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+

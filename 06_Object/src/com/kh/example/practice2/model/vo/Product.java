@@ -4,8 +4,26 @@ public class Product {
 	private String pName;
 	private int price;
 	private String brand;
-	public Product(){}
-	public void information() {
-		System.out.println(pName + ", " + price + ", " + brand);
+	
+	// 기본생성자
+	public Product() {
+		
 	}
+	
+	public void information() {
+		System.out.println(pName+" ,"+price+", "+brand);
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+

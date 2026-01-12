@@ -3,58 +3,67 @@ package com.kh.operator;
 import java.util.Scanner;
 
 public class D_Logical {
-	/*
-	 * ³í¸®¿¬»êÀÚ
-	 * - ³í¸® °ª µÎ°³¸¦ ºñ±³ÇÏ´Â ¿¬»êÀÚ
-	 * AND && : a && b -> a¿Í b°¡ ¸ğµÎ ÂüÀÏ °æ¿ì true ¹İÈ¯. (µÑ Áß ÇÏ³ª¶óµµ °ÅÁşÀÌ¸é false)
-	 * OR || : a || b -> a¿Í b Áß ÇÏ³ª¶óµµ ÂüÀÏ °æ¿ì true ¹İÈ¯. (µÑ ´Ù °ÅÁşÀÎ °æ¿ì false)
+	/* 
+	 * ë…¼ë¦¬ ì—°ì‚°ì 
+	 *  - ë…¼ë¦¬ ê°’ ë‘ê°œë¥¼ ë¹„êµí•˜ëŠ” ì—°ì‚°ì
 	 * 
-	 * ~ ÇÏ¸é¼­ -> AND
-	 * ¶Ç´Â -> OR
-	 */
+	 * AND && : a && b -> aì™€ bê°€ ëª¨ë‘ ì°¸ì¼ ê²½ìš° trueë°˜í™˜.
+	 *                    aì™€ b ë‘˜ ì¤‘ í•˜ë‚˜ë¼ê³  ê±°ì§“ì¼ ê²½ìš° false.
+	 *                    
+	 * OR  || : a || b -> aì™€ bë‘˜ ì¤‘ í•˜ë‚˜ë¼ë„ ì°¸ì¼ê²½ìš° true, 
+	 *                    aì™€ b ë‘˜ ë‹¤ ê±°ì§“ì¸ ê²½ìš° falseë°˜í™˜.
+	 * ~í•˜ë©´ì„œ => AND
+	 * ë˜ëŠ” => OR                   
+	 *                    
+	 * */
 	Scanner sc = new Scanner(System.in);
-
-	public void method() {
-		System.out.print("input : ");
-		int a = sc.nextInt();
-
-		boolean result = a > 0 && (a % 2) == 0;
-
-		// numÀÇ °ªÀÌ 0º¸´Ù Å©¸é¼­ Â¦¼öÀÔ´Ï±î?
+	public void method1() {
+		System.out.print("ìˆ«ìë¥¼ í•˜ë‚˜ ì…ë ¥í•˜ì„¸ìš”.");
+		int num = sc.nextInt();
+		
+		// numì˜ ê°’ì´ 0ë³´ë‹¤ í¬ë©´ì„œ ì§ìˆ˜ì…ë‹ˆê¹Œ?
+		boolean result = (num > 0) && (num % 2 == 0);
 	}
-
+	
 	public void method2() {
-		// ÀÔ·ÂÇÑ °ªÀÌ 1 ÀÌ»ó 100 ÀÌÇÏÀÇ ¼ıÀÚÀÎÁö È®ÀÎ.
+		// ì…ë ¥í•œ ê°’ì´ 1 ì´ìƒ 100 ì´í•˜ì˜ ìˆ«ìì¸ì§€ í™•ì¸.
 		// 1 <= x <= 100
-		System.out.println("input : ");
-		int x = sc.nextInt();
-		boolean result = 1 <= x && x <= 100;
-
+		System.out.print("ì •ìˆ˜ : ");
+		int num = sc.nextInt();
+		
+		// 1 <= x <= 100ì„ ìë°”ì‹ìœ¼ë¡œ ë³€í™˜
+		// (1 <= x) && (x <= 100)
+		boolean result = 1 <= num && num <= 100;
 	}
-
+	
 	public void method3() {
-		// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀÌ 'y' °Å³ª 'Y'ÀÎ °æ¿ì Âü, ¾Æ´Ï¸é °ÅÁşÀ» ¹İÈ¯ÇÏ½Ã¿À.
-		System.out.println("input : ");
-		char text1 = sc.next().charAt(0);
-		boolean result = text1 == 'y' || text1 == 'Y';
+		// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì´ 'y'ê±°ë‚˜ 'Y'ì¸ ê²½ìš° ì°¸, ì•„ë‹ˆë©´ ê±°ì§“ì„ ë°˜í™˜í•˜ì‹œì˜¤.
+		System.out.print("ê³„ì† ì§„í–‰í•˜ì‹œë ¤ë©´ yë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
+		char ch = sc.next().charAt(0);
+		
+		boolean result = ch == 'y' || ch == 'Y';
 	}
 	
 	public void method4() {
 		int num1 = 10;
-		//and¿¬»êÀÚÀÇ °æ¿ì A && BÀÇ Á¶°Ç Áß AÀÇ °ªÀÌ falseÀÎ °æ¿ì
-		//µÚ ÂÊ Á¶°ÇµéÀÌ ¹¹µç ¹«Á¶°Ç falseÀÌ±â ¶§¹®¿¡ µÚÂÊ Á¶°Ç½ÄÀº ½ÇÇàÇÏÁö ¾Ê´Â´Ù.
-		boolean result1 = (num1 < 5) && (num1++ > 0); // °ÅÁş!
-		System.out.println("°á°ú´Â ¹«¾ùÀÎ°¡ : " + result1);
 		
+		// andì—°ì‚°ìì˜ ê²½ìš° A && Bì˜ ì¡°ê±´ ì¤‘ Aì˜ ê°’ì´ falseì¸ ê²½ìš°
+		// ë’¤ ìª½ ì¡°ê±´ë“¤ì´ ë­ë“  ë¬´ì¡°ê±´ falseì´ê¸° ë•Œë¬¸ì— ë’¤ìª½ ì¡°ê±´ì‹ì€ ì‹¤í–‰í•˜ì§€
+		// ì•ŠëŠ”ë‹¤.
+		boolean result1 = (num1 < 5) && (num1++ > 0);
+		System.out.println("result1 : " + result1);
+		System.out.println(num1);// 11
 		
 		int num2 = 10;
-		boolean result2 = (num2 < 20) || (++num2 > 0);
-		System.out.println(num2); //10
+		boolean result2 = num2 < 20 || ++num2 > 0; // true
+		System.out.println(num2);// 10
 	}
-
-	public static void main(String[] args) {
-		D_Logical dl = new D_Logical();
-		dl.method4();
-	}
-
+	
+	
+	
 }
+
+
+
+
+

@@ -1,6 +1,7 @@
 package com.kh.chap03_class.model.vo;
 
 public class Person {
+	// 필드부 
 	private String id;
 	private String pwd;
 	private String name;
@@ -9,6 +10,7 @@ public class Person {
 	private String phone;
 	private String email;
 	
+	// 메서드부
 	public void changeName(String name) {
 		this.name = name;
 	}
@@ -16,4 +18,28 @@ public class Person {
 	public void printName() {
 		System.out.println(this.name);
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

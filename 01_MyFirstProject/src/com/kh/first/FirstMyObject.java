@@ -1,15 +1,19 @@
 package com.kh.first;
-// package + class ¸í == Ç®Å¬·¡½º¸í
+// package + classëª… == í’€í´ë˜ìŠ¤ëª…
 
 import java.util.Date;
-import java.util.Random;
+
 public class FirstMyObject {
-	//ÀÚ¹Ù´Â ½ÇÇàÇÏ±â À§ÇØ ¹İµå½Ã main¸Ş¼­µå°¡ Á¸ÀçÇØ¾ß ÇÑ´Ù.
-	public static void main(String[] args) {
-		Date day = new Date();
-		System.out.println("¾È³çÀº ¿µ¿øÇÑ Çì¾îÁüÀº ¾Æ´Ï°ÚÁö¿ä");
-		System.out.println(day);
-		//test
 	
+	// ìë°”ëŠ” ì‹¤í–‰í•˜ê¸° ìœ„í•´ ë°˜ë“œì‹œ mainë©”ì„œë“œê°€ ì¡´ì¬í•´ì•¼ í•œë‹¤.
+	public static void main(String[] args) {
+		System.out.println("ì•ˆë…• ã…‹ã…‹");
+		System.out.println(new Date());
 	}
+	
 }
+
+
+
+
+

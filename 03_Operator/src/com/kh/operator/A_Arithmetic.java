@@ -1,20 +1,23 @@
 package com.kh.operator;
 
 public class A_Arithmetic {
-	//»ê¼ú¿¬»êÀÚ
-	// * / %   >    + -
+	
+	// ì‚°ìˆ ì—°ì‚°ì
+	// * / % + -
 	public void method() {
 		int num1 = 10;
 		int num2 = 3;
 		
-		System.out.println("num1 + num2 = " + (num1+num2)); //13
-		System.out.println("num1 + num2 = " + (num1-num2)); //7
-		System.out.println("num1 + num2 = " + (num1*num2)); //30
-		System.out.println("num1 + num2 = " + (num1/num2)); //3
-		System.out.println("num1 + num2 = " + (num1%num2)); //1		
+		System.out.println("num1 + num2 = " +(num1 + num2)); // 13
+		System.out.println("num1 - num2 = " +(num1 - num2)); // 7
+		System.out.println("num1 * num2 = " +(num1 * num2)); // 30
+		System.out.println("num1 / num2 = " +(num1 / num2)); // 3
+		System.out.println("num1 % num2 = " +(num1 % num2)); // 1
 	}
-	public static void main(String[] args) {
-		A_Arithmetic am = new A_Arithmetic();
-		am.method();
-	}
+	
 }
+
+
+
+
+
