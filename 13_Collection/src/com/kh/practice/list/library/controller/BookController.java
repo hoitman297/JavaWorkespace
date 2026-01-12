@@ -19,9 +19,11 @@ public class BookController {
 	
 	
 	public void insertBook(Book bk) {
+		bookList.add(bk);
 	}
 	
 	public ArrayList selectList() {
+		return (ArrayList)bookList;
 	}
 	
 	public ArrayList searchBook(String keyword) {

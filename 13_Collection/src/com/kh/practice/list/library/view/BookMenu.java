@@ -3,6 +3,7 @@ package com.kh.practice.list.library.view;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.kh.chap02_set.model.vo.Student;
 import com.kh.practice.list.library.controller.BookController;
 import com.kh.practice.list.library.model.vo.Book;
 
@@ -13,7 +14,7 @@ public class BookMenu {
 	private BookController bc = new BookController();
 
 	public void mainMenu() {
-		while(true) {
+		while (true) {
 			System.out.println("== Welcome KH Library ==");
 			System.out.println("******* 메인 메뉴 ******* ");
 			System.out.println("1. 새 도서 추가   ");
@@ -25,7 +26,7 @@ public class BookMenu {
 			System.out.print("메뉴 번호 선택 : ");
 			int menu = sc.nextInt();
 			sc.nextLine();
-			
+
 			switch (menu) {
 			case 1:
 				insertBook();
@@ -42,16 +43,44 @@ public class BookMenu {
 			case 5:
 				ascBook();
 				break;
-			case 9 :
+			case 9:
 				return;
 			}
 		}
 	}
 
 	public void insertBook() {
+		String category = null;
+		System.out.print("1. 도서명  : ");
+		String title = sc.next();
+		System.out.print("2. 저자명  : ");
+		String author = sc.next();
+		System.out.print("장르(1. 인문 / 2. 과학 / 3. 외국어 / 4. 기타) : ");
+		int num = sc.nextInt();
+		System.out.print("가격 : ");
+		int price = sc.nextInt();
+
+		if (num == 1) {
+			category = "인문";
+		} else if (num == 2) {
+			category = "과학";
+		} else if (num == 3) {
+			category = "외국어";
+		} else if (num == 4) {
+			category = "기타";
+		}
+		bc.insertBook(new Book(title, author, category, price)) ;
 	}
 
 	public void selectList() {
+		ArrayList<Book> bookList = bc.selectList();
+		if(bookList == null || bookList.isEmpty()) {
+			System.out.println("존재하는 도서가 없습니다.");
+		}else {
+			for(Book a  : bookList ) {
+				System.out.println(a);
+			}
+		}
 	}
 
 	public void searchBook() {
