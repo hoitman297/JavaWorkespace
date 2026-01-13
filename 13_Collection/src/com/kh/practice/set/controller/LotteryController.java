@@ -26,6 +26,7 @@ public class LotteryController {
 		if(result && win != null) {
 			win.remove(l);
 		}
+		return result;
 		
 	// 전달 받은 l을 lottery에서 삭제
 	// 당첨자 목록(win) 중에 삭제된 추첨 대상자가 존재할 수 있으니
