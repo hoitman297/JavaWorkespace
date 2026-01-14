@@ -4,7 +4,6 @@ public class HashMap {
 	private Entry[] table;
 	private int capacity;
 	private int size;
-	//아 이수아 진짜 아 내 머리에서 나가!
 	
 	public HashMap(int capacity){
 		

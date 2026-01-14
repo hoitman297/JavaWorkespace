@@ -2,6 +2,8 @@ package com.kh.chap04_map.part03_clone.run;
 
 import java.util.Map.Entry;
 
+import javax.swing.text.html.parser.Entity;
+
 public class HashMapRun <K, V>{
 	private Entry<K, V>[] table;
 	private int capacity; //객체배열의 크기로써 사용
@@ -23,9 +25,10 @@ public class HashMapRun <K, V>{
 	//객체 생성시 반드시 객체배열의 크기를 지정
 	public HashMapRun(int capacity) {
 		this.capacity = capacity;
+		this.table = new Entry[capacity];
 	}
 	
-	public int getIndex(K key) {
+	public int getIndex(String key) {
 		//매개변수로 전달받은 key값을 hashCode()로 변환시킨후
 		// 객체의 총 저장공간 수 (capacity)만큼 나눈 나머지 결과값을 반환하는 함수.
 		int hash = key.hashCode();
@@ -50,19 +53,89 @@ public class HashMapRun <K, V>{
 			table[index].value = value;
 		}else {
 			//2. key은 다르지만 hash값이 우연히 일치한 경우
-			table[index].next = new Entry<>(key,value,null);
+//			table[index].next = new Entry<>(key,value,null);
+		
+			Entry<K,V> next = table[index];
+			
+			while (true) {
+				// 다음으로 뽑은 entry의 key값이 현재 전달받은 key값과 동일한 경우(중복)
+				if (next.key.equals(key)) {
+					next.value = value;
+					return;
+				}
+
+				if (next.next == null) {
+					next.next = new Entry<>(key, value, next);
+					break;
+				} // 현재 entry가 마지막 entry인 경우
+				if (next.next == null) {
+					next.next = new Entry<>(key, value, null);
+					break;
+				}
+				next = next.next;
+			}
+
 		}
+
+		size++;
+
 	}
 	
 	public V get(K key) {
-		
+		int index = getIndex(key);
+		Entry<K, V> entry = table[index];
+
+		while (true) {
+			if (entry.key.equals(key)) {
+				return entry.value;
+			}
+			if(entry.key.equals(key)) {
+				return entry.value;
+			}
+			entry = entry.next;
+		}
 	}
 	public boolean containsKey(String key) {
+		int index = getIndex(key);
+		Entry<K,V> entry = table[index];
 		
+		if(entry == null) {
+			return false;
+		}
+		
+		do {
+			if(entry.key.equals(key)) {
+				return true;
+			}
+			entry = entry.next;
+		}while(entry != null);
 	}
 	
 	public void remove(String key) {
+		int index = getIndex(key);
+		Entry<K ,V> entry = table[index];
+		Entry<K, V> prev = null;
 		
+		//접근시 내부의 값이 null이라면 메소드 종료;
+		do {
+			if(entry == null) {
+				return;
+			}
+			
+			if(entry.key.equals(key)) {
+				if(table[index] == entry) {
+					table[index] = entry.next;
+				}else {
+					prev.next = entry.next;
+				}
+			}
+			prev = entry;
+			entry = entry.next;
+		}while(entry != null);
+		
+
+		//객체가 있다면 저장된 객체의 key값과 매개변수로 전달받은 key값 확인
+		// 동일하다면 현재 Node 삭제.
 	}
 	
 	public int size() {
