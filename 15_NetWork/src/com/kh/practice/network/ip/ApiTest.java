@@ -1,4 +1,4 @@
-package com.kh.practice.network.ip;
+	package com.kh.practice.network.ip;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
