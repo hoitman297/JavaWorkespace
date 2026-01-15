@@ -27,9 +27,8 @@ public class StudentMenu {
 				 s.getScore() < StudentController.CUT_LINE ? 
 						 "재시험 대상입니다." : "통과입니다" 
 				  ));
-	  }
+	  	}
 	}
-	
 }
 
 
