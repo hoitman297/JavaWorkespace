@@ -1,6 +1,7 @@
 package com.kh.practice.thread;
 
 public class Customer implements Runnable {
+<<<<<<< HEAD
 	private Data data; // 공유 객체를 저장할 참조 변수
 
     // 생성자: 공유할 Data 객체를 주입받음
@@ -24,4 +25,25 @@ public class Customer implements Runnable {
             }
         }
     }
+=======
+	Data data;
+	public Customer(Data data) {
+		this.data = data;
+	}
+	
+	public void run() {
+		for (int i = 0; i < 10; i++) {
+			int value = data.getValue();
+			System.out.println("get value : " + value);
+			System.out.println("값을 꺼냈습니다. value가 비었습니다.");
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+>>>>>>> branch 'main' of https://github.com/hoitman297/JavaWorkespace.git
 }
