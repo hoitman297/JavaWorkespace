@@ -1,5 +1,7 @@
 package com.kh.chap01_innerClass_part02_static;
 
+import javax.xml.crypto.Data;
+
 public class KakaoUserInfoResponse {
 	/*
 	 	DTO(Data Transfer Object)
@@ -15,7 +17,7 @@ public class KakaoUserInfoResponse {
 	 	- 가치가 있는 클래스를 표현하기 위한 목적으로 사용하는 클래스
 	 	- 객체지향적으로 설계된 클래스
 	 	- 어플리케이션의 핵심적인 역할을 수행하는 클래스를 정의하는 클래스며, 데이터의 불변성이
-	 		유지되어야 하기 때문에 데이터를 중간에 변경할 수 있는 Setter 메서드는 정희하지 않는다.
+	 		유지되어야 하기 때문에 데이터를 중간에 변경할 수 있는 Setter 메서드는 정의하지 않는다.
 	 	- 캡슐화 및 상속이 구현되어 있으며, equals & hashcode 등 객체의 기능을 정의하는
 	 		메서드들이 있다.
 	 */
